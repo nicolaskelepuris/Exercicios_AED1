@@ -12,7 +12,7 @@ namespace Exercicios_AED1
             var grades = new float[4];
             for (int i = 0; i < grades.Length; i++)
             {
-                Console.WriteLine("Please inform grade number {0} to get the average (using comma as decimal separator)", i+1);
+                Console.WriteLine("Please inform grade number {0} to get the average", i+1);
                 grades[i] = float.Parse(Console.ReadLine());
             }
             return grades;
