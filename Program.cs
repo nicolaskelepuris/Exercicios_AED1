@@ -1,4 +1,5 @@
 ﻿using System;
+using Exercicios_AED1.ExercicioDia13_10_2020Classes;
 
 namespace Exercicios_AED1
 {
@@ -37,6 +38,9 @@ namespace Exercicios_AED1
             // macaco2.VerConteudoDoEstomago();
             // macaco2.DigerirConteudoDoEstomago();
             // macaco2.VerConteudoDoEstomago();
+
+            var aeronave = new Aeronave("Aeronave", 2000, 1500, 150, 4500, 250000, "Joao", "Vitoria");
+            Console.WriteLine(aeronave.Voar(3000));
         }
     }
 }
