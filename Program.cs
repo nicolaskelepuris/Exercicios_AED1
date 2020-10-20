@@ -6,7 +6,7 @@ using Exercicios_AED1.ExercicioDia20_10_2020Classes;
 namespace Exercicios_AED1
 {
     class Program
-    {        
+    {
         static void Main(string[] args)
         {
             //var exercicio1 = new Exercicio1();
@@ -41,8 +41,14 @@ namespace Exercicios_AED1
             // macaco2.DigerirConteudoDoEstomago();
             // macaco2.VerConteudoDoEstomago();
 
+            #region Exercicio dia 13/10/2020
+
             // var aeronave = new Aeronave("Aeronave", 2000, 1500, 150, 4500, 250000, "Joao", "Vitoria");
             // Console.WriteLine(aeronave.Voar(3000));
+
+            #endregion
+
+            #region Exercicio dia 20/10/2020  
 
             var carros = new List<Carro>();
 
@@ -67,6 +73,8 @@ namespace Exercicios_AED1
             {
                 Console.WriteLine("Modelo: {0}, Quantidade de combustivel: {1}, Valor gasto com combustivel: {2}", item.Key.Modelo, item.Value, carrosComValorDeCombustivelGasto[item.Key]);
             }
+            
+            #endregion
         }
     }
 }
