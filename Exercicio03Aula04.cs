@@ -17,7 +17,6 @@ namespace Exercicios_AED1
     // - O total de votos nulos;
     class Exercicio03Aula04
     {
-        bool isVoteValid;
         int[] votes = new int[5];
         int mostVotesQuantity;
         int mostVotedCandidateIndex;
