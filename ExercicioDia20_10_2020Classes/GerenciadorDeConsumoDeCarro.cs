@@ -21,26 +21,26 @@ namespace Exercicios_AED1.ExercicioDia20_10_2020Classes
 
         public static Dictionary<Carro, float> GetQuantidadeDeCombustivelGasto(List<Carro> carros, float quantidadeDeKM)
         {
-            Dictionary<Carro, float> quantidadeDeCombustivelGastoPorCadaCarro = new Dictionary<Carro, float>();
+            Dictionary<Carro, float> carrosComQuantidadeDeCombustivelGasto = new Dictionary<Carro, float>();
 
             foreach (var carro in carros)
             {
-                quantidadeDeCombustivelGastoPorCadaCarro.Add(carro, quantidadeDeKM / carro.ConsumoEmKMPorLitro);
+                carrosComQuantidadeDeCombustivelGasto.Add(carro, quantidadeDeKM / carro.ConsumoEmKMPorLitro);
             }
 
-            return quantidadeDeCombustivelGastoPorCadaCarro;
+            return carrosComQuantidadeDeCombustivelGasto;
         }
 
-        public static Dictionary<Carro, float> GetValorDeCombustivelGasto(Dictionary<Carro, float> quantidadeDeCombustivelGastoPorCadaCarro)
+        public static Dictionary<Carro, float> GetValorDeCombustivelGasto(Dictionary<Carro, float> carrosComQuantidadeDeCombustivelGasto)
         {
-            Dictionary<Carro, float> valorDeCombustivelGastoPorCadaCarro = new Dictionary<Carro, float>();
+            Dictionary<Carro, float> carrosComValorDeCombustivelGasto = new Dictionary<Carro, float>();
 
-            foreach (var item in quantidadeDeCombustivelGastoPorCadaCarro)
+            foreach (var item in carrosComQuantidadeDeCombustivelGasto)
             {
-                valorDeCombustivelGastoPorCadaCarro.Add(item.Key, 4.89f * item.Value);
+                carrosComValorDeCombustivelGasto.Add(item.Key, 4.89f * item.Value);
             }
 
-            return valorDeCombustivelGastoPorCadaCarro;
+            return carrosComValorDeCombustivelGasto;
         }
     }
 }
