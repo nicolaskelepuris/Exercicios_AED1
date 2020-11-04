@@ -10,12 +10,15 @@ namespace Exercicios_AED1
     {
         static void Main(string[] args)
         {
+            #region Exercicio dia 18/08/2020
             //var exercicio1 = new Exercicio1();
             //exercicio1.GetTwoNumbersAndPrintSum();
 
             //var exercicio2 = new Exercicio2();
             //exercicio2.GetFourGradesAndPrintAverage();
+            #endregion
 
+            #region Exercicio dia 25/08/2020
             //var exercicio01Aula04 = new Exercicio01Aula04();
             //exercicio01Aula04.PerformExercicio01Aula04();
 
@@ -24,7 +27,9 @@ namespace Exercicios_AED1
 
             //var exercicio03Aula04 = new Exercicio03Aula04();
             //exercicio03Aula04.PerformExercicio03Aula04();
+            #endregion
 
+            #region Exercicio dia 08/09/2020
             // var macaco1 = new Exercicio8MacacoAulaDia08_09_2020("macaco1");
             // var macaco2 = new Exercicio8MacacoAulaDia08_09_2020("macaco2");
             // Console.WriteLine("Macaco 1:");
@@ -41,6 +46,7 @@ namespace Exercicios_AED1
             // macaco2.VerConteudoDoEstomago();
             // macaco2.DigerirConteudoDoEstomago();
             // macaco2.VerConteudoDoEstomago();
+            #endregion
 
             #region Exercicio dia 13/10/2020
 
@@ -76,10 +82,12 @@ namespace Exercicios_AED1
             // }
             
             #endregion
-        
+
+            #region Exercicio dia 03/11/2020
             CadastroDeCarro.Cadastrar();
             ConsumoDoCarro.PrintaCarroMaisEconomico();
             ConsumoDoCarro.PrintaTodosOsCarrosEConsumos();
+            #endregion
         }
     }
 }
