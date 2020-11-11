@@ -90,9 +90,11 @@ namespace Exercicios_AED1
             //ConsumoDoCarro.PrintaTodosOsCarrosEConsumos();
             #endregion
 
+            #region Exercicio dia 10/11/2020
             var usuario = AtendimentoAoCliente.CadastrarUsuario();
             var opcaoDoCliente = AtendimentoAoCliente.PegarOpcaoVisualizarIdeiasOuCriarIdeia();
             AtendimentoAoCliente.RealizaOpcaoDoCliente(opcaoDoCliente, usuario);
+            #endregion
             
         }
     }
