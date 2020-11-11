@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Exercicios_AED1.ExercicioDia03_11_2020Classes;
+using Exercicios_AED1.ExercicioDia10_11_2020Classes;
 using Exercicios_AED1.ExercicioDia13_10_2020Classes;
 using Exercicios_AED1.ExercicioDia20_10_2020Classes;
 
@@ -80,14 +81,19 @@ namespace Exercicios_AED1
             // {
             //     Console.WriteLine("Modelo: {0}, Quantidade de combustivel: {1}, Valor gasto com combustivel: {2}", item.Key.Modelo, item.Value, carrosComValorDeCombustivelGasto[item.Key]);
             // }
-            
+
             #endregion
 
             #region Exercicio dia 03/11/2020
-            CadastroDeCarro.Cadastrar();
-            ConsumoDoCarro.PrintaCarroMaisEconomico();
-            ConsumoDoCarro.PrintaTodosOsCarrosEConsumos();
+            //CadastroDeCarro.Cadastrar();
+            //ConsumoDoCarro.PrintaCarroMaisEconomico();
+            //ConsumoDoCarro.PrintaTodosOsCarrosEConsumos();
             #endregion
+
+            var usuario = AtendimentoAoCliente.CadastrarUsuario();
+            var opcaoDoCliente = AtendimentoAoCliente.PegarOpcaoVisualizarIdeiasOuCriarIdeia();
+            AtendimentoAoCliente.RealizaOpcaoDoCliente(opcaoDoCliente, usuario);
+            
         }
     }
 }
