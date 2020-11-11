@@ -1,14 +1,16 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Text.Json;
 
 namespace Exercicios_AED1.ExercicioDia10_11_2020Classes
 {
     public static class AtendimentoAoCliente
     {
-        const string caminhoArquivoIdeias = "..\\ideias.txt";
-        const string caminhoArquivoUsuarios = "..\\usuarios.txt";
-        static Repositorio<Usuario> repositorioDeUsuario = new Repositorio<Usuario>(caminhoArquivoUsuarios);
-        static RepositorioDeIdeias repositorioDeIdeias = new RepositorioDeIdeias(caminhoArquivoIdeias);
+        static Repositorio<Usuario> repositorioDeUsuario = new Repositorio<Usuario>(ManipuladorDeArquivo.CaminhoArquivoUsuarios);
+        static RepositorioDeIdeias repositorioDeIdeias = new RepositorioDeIdeias(ManipuladorDeArquivo.CaminhoArquivoIdeias);
         public static Usuario CadastrarUsuario()
         {
             Console.WriteLine("Informe os dados para o cadastro de usuario:\n");
@@ -21,6 +23,7 @@ namespace Exercicios_AED1.ExercicioDia10_11_2020Classes
             var usuario = new Usuario(id, nome, email);
 
             repositorioDeUsuario.CadastrarItem(usuario);
+            ManipuladorDeArquivo.SalvarUsuariosNoArquivo(repositorioDeUsuario);
 
             //Console.Clear();
 
@@ -72,6 +75,8 @@ namespace Exercicios_AED1.ExercicioDia10_11_2020Classes
             var ideia = new Ideia(id, areaDeAplicacao, descricao, idUsuario);
 
             repositorioDeIdeias.CadastrarItem(ideia);
+
+            ManipuladorDeArquivo.SalvarIdeiasNoArquivo(repositorioDeIdeias);
 
             Console.Clear();
         }
@@ -141,6 +146,7 @@ namespace Exercicios_AED1.ExercicioDia10_11_2020Classes
             {
                 var ideia = PegarIdeiaVotada();
                 ideia.AdicionarVoto();
+                ManipuladorDeArquivo.SalvarIdeiasNoArquivo(repositorioDeIdeias);
                 MostrarIdeiasEmDestaque();
             }
             else

@@ -15,11 +15,11 @@ namespace Exercicios_AED1.ExercicioDia10_11_2020Classes
             Votos = 0;
         }
 
-        public int Id { get; private set; }
-        public AreaDeAplicacao AreaDeAplicacao { get; private set; }
-        public string Descricao { get; private set; }
-        public int IdUsuario { get; private set; }
-        public int Votos { get; private set; }
+        public int Id { get; set; }
+        public AreaDeAplicacao AreaDeAplicacao { get; set; }
+        public string Descricao { get; set; }
+        public int IdUsuario { get; set; }
+        public int Votos { get; set; }
 
         public void AdicionarVoto(){
             Votos++;

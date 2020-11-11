@@ -1,4 +1,8 @@
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
+using System.Text.Json;
 
 namespace Exercicios_AED1.ExercicioDia10_11_2020Classes
 {
@@ -8,8 +12,17 @@ namespace Exercicios_AED1.ExercicioDia10_11_2020Classes
 
         public Repositorio(string caminho)
         {
-            itensCadastrados = new List<T>();
-        }
+            List<T> itens = new List<T>();
+            try
+            {
+                itens = new List<T>(ManipuladorDeArquivo.LerArquivo<T>(caminho));
+            }
+            catch (System.Exception)
+            {
+            }
+
+            itensCadastrados = itens.Count > 0 ? new List<T>(itens) : new List<T>();
+        }        
 
         public void CadastrarItem(T entidade)
         {
