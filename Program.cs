@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ExercicioDia01_12_2020Classes;
 using Exercicios_AED1.ExercicioDia03_11_2020Classes;
 using Exercicios_AED1.ExercicioDia10_11_2020Classes;
 using Exercicios_AED1.ExercicioDia13_10_2020Classes;
@@ -91,9 +92,25 @@ namespace Exercicios_AED1
             #endregion
 
             #region Exercicio dia 10/11/2020
-            var usuario = AtendimentoAoCliente.CadastrarUsuario();
-            var opcaoDoCliente = AtendimentoAoCliente.PegarOpcaoVisualizarIdeiasOuCriarIdeia();
-            AtendimentoAoCliente.RealizaOpcaoDoCliente(opcaoDoCliente, usuario);
+            // var usuario = AtendimentoAoCliente.CadastrarUsuario();
+            // var opcaoDoCliente = AtendimentoAoCliente.PegarOpcaoVisualizarIdeiasOuCriarIdeia();
+            // AtendimentoAoCliente.RealizaOpcaoDoCliente(opcaoDoCliente, usuario);
+            #endregion
+
+            #region Exercicio dia 01/12/2020
+            var empregado = new Empregado(nome: "Empregado 1", sobrenome: "Sobrenome do empregado 1", salarioMensal: 2000.0);
+            try
+            {
+                empregado.SalarioMensal = -1.0;
+            }
+            catch (SalarioInvalidoException)
+            {
+                Console.WriteLine("Aconteceu um erro ao mudar o salario mensal para um valor negativo, o valor nao foi alterado");
+            }
+            var empregado2 = new Empregado(nome: "Empregado 2", sobrenome: "Sobrenome do empregado 2", salarioMensal: 4000.0);
+
+            Console.WriteLine(empregado.ToString());
+            Console.WriteLine(empregado2.ToString());
             #endregion
             
         }
