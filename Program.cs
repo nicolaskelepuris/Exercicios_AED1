@@ -98,6 +98,7 @@ namespace Exercicios_AED1
             #endregion
 
             #region Exercicio dia 01/12/2020
+            // exercicio 1
             var empregado = new Empregado(nome: "Empregado 1", sobrenome: "Sobrenome do empregado 1", salarioMensal: 2000.0);
             try
             {
@@ -111,8 +112,26 @@ namespace Exercicios_AED1
 
             Console.WriteLine(empregado.ToString());
             Console.WriteLine(empregado2.ToString());
+
+            // exercicio 2
+            var datas = new List<Data>();
+            bool continuarInserindoDados = true;
+            while (continuarInserindoDados)
+            {
+                Console.WriteLine("Informe o dia");
+                var dia = int.Parse(Console.ReadLine());
+                Console.WriteLine("Informe o mes");
+                var mes = int.Parse(Console.ReadLine());
+                Console.WriteLine("Informe o ano");
+                var ano = int.Parse(Console.ReadLine());
+
+                datas.Add(new Data(dia, mes, ano));
+
+                Console.WriteLine("Informe se deseja continuar inserindo datas: sim/nao");
+                continuarInserindoDados = Console.ReadLine() == "sim" ? true : false;
+            }
             #endregion
-            
+
         }
     }
 }
